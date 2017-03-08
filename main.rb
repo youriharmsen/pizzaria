@@ -1,6 +1,10 @@
 #main.rb
+require_relative "menu.rb"
+
+menu = Menu.new
 
 done=false
+
 puts "Hello pizza-lover, welcom to this awesome place"
 
 while not done
@@ -12,11 +16,12 @@ while not done
     choice = gets.chomp.to_i
     case choice
       when 1
-        puts "Let me show you the menu"
+        puts "Let me show you the menu \n "
+        menu.print
       when 2
         done = true
       else
-        puts "I dont understand, please be clearer"
+        puts "\n\n\n\n\nI dont understand, please be clearer\n\n\n\n\n".upcase
     end
 
     if done
